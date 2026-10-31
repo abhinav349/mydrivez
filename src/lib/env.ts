@@ -5,14 +5,11 @@ function optional(name: string): string | undefined {
   return v && v.trim() !== "" ? v.trim() : undefined;
 }
 
-const authSecret = optional("AUTH_SECRET");
-if (!authSecret && process.env.NODE_ENV === "production") {
-  throw new Error("AUTH_SECRET must be set in production.");
-}
+// AUTH_SECRET is enforced where it's used (src/lib/auth/jwt.ts), at request time rather than at
+// import, so `next build` doesn't need runtime secrets.
 
 export const env = {
   appUrl: optional("APP_URL") ?? (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000"),
-  authSecret: authSecret ?? "dev-only-insecure-secret-change-me-please-32chars",
   /** When true, demo helpers (simulated payments, on-screen OTP codes) are enabled where no real provider is configured. */
   demoMode: optional("DEMO_MODE") === "true",
   cronSecret: optional("CRON_SECRET"),

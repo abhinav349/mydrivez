@@ -11,8 +11,20 @@ export type SessionClaims = {
   role: "CUSTOMER" | "STAFF" | "ADMIN";
 };
 
+const DEV_SECRET = "dev-only-insecure-secret-change-me-please-32chars";
+
+/** Checked per call (never at import) so builds work without secrets, but production never falls back to the dev key. */
 function key() {
-  const secret = process.env.AUTH_SECRET || "dev-only-insecure-secret-change-me-please-32chars";
+  const secret = process.env.AUTH_SECRET?.trim();
+  if (!secret) {
+    if (process.env.NODE_ENV === "production") {
+      throw new Error("AUTH_SECRET is not set. Add it in your hosting environment variables (32+ random characters).");
+    }
+    return new TextEncoder().encode(DEV_SECRET);
+  }
+  if (secret.length < 32 && process.env.NODE_ENV === "production") {
+    throw new Error("AUTH_SECRET is too short. Use at least 32 random characters.");
+  }
   return new TextEncoder().encode(secret);
 }
 
