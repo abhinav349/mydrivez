@@ -1,5 +1,7 @@
 // Edge-safe token helpers (used by middleware and server code). No Node-only imports here.
-import { SignJWT, jwtVerify } from "jose";
+// Deep imports keep jose's JWE/deflate code (DecompressionStream) out of the Edge middleware bundle.
+import { SignJWT } from "jose/jwt/sign";
+import { jwtVerify } from "jose/jwt/verify";
 
 export const SESSION_COOKIE = "mdz_session";
 
