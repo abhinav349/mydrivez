@@ -1,0 +1,42 @@
+﻿# Image credits
+
+Vehicle photos: Wikimedia Commons (CC BY / CC BY-SA, see each source page). Lifestyle photos: Unsplash (Unsplash License).
+
+- cars/swift-1.jpg: https://commons.wikimedia.org/wiki/File:Suzuki_Swift_(2024)_hybrid_DSC_7922.jpg
+- cars/swift-2.jpg: https://commons.wikimedia.org/wiki/File:2024_Suzuki_Swift_Hybrid_MX_in_Premium_Silver,_front_right.jpg
+- cars/i20-1.jpg: https://commons.wikimedia.org/wiki/File:Hyundai_i20_(BC3)_1X7A6488.jpg
+- cars/i20-2.jpg: https://commons.wikimedia.org/wiki/File:Hyundai_i20_(BC3)_Facelift_Auto_Zuerich_2023_1X7A0968.jpg
+- cars/nexon-1.jpg: https://commons.wikimedia.org/wiki/File:2023_Tata_Nexon_XZA+_front_view.jpg
+- cars/nexon-2.jpg: https://commons.wikimedia.org/wiki/File:2023_Tata_Nexon_XZA+_rear_view.jpg
+- cars/nexon-ev-1.jpg: https://commons.wikimedia.org/wiki/File:2020_Tata_Nexon_EV_(India)_front_view.png
+- cars/creta-1.jpg: https://commons.wikimedia.org/wiki/File:Hyundai_Creta_1.5_Design_2024.jpg
+- cars/creta-2.jpg: https://commons.wikimedia.org/wiki/File:2024_Hyundai_Creta_Alpha.jpg
+- cars/seltos-1.jpg: https://commons.wikimedia.org/wiki/File:0_Kia_Seltos_2.jpg
+- cars/seltos-2.jpg: https://commons.wikimedia.org/wiki/File:Kia_Seltos_001.jpg
+- cars/thar-1.jpg: https://commons.wikimedia.org/wiki/File:Mahindra_Thar_Photoshoot_at_Perupalem_Beach_(West_Godavari_District,_AP,_India)_Djdavid.jpg
+- cars/thar-2.jpg: https://commons.wikimedia.org/wiki/File:Mahindra_Thar_ROXX_on_rocks.jpg
+- cars/city-1.jpg: https://commons.wikimedia.org/wiki/File:2023_Honda_City_1.5_E_(new_facelift).jpg
+- cars/city-2.jpg: https://commons.wikimedia.org/wiki/File:2023_Honda_City_RS.jpg
+- cars/verna-1.jpg: https://commons.wikimedia.org/wiki/File:Hyundai_Accent_1.5_Plus_2024.jpg
+- cars/verna-2.jpg: https://commons.wikimedia.org/wiki/File:Hyundai_Accent_Design_2024_(53443284447).jpg
+- cars/innova-1.jpg: https://commons.wikimedia.org/wiki/File:Toyota_Zenix_2.0_V_Silver_Metallic.jpg
+- cars/xuv700-1.jpg: https://commons.wikimedia.org/wiki/File:2021_Mahindra_XUV700_2.2_AX7_(India)_front_view.png
+- cars/xuv700-2.jpg: https://commons.wikimedia.org/wiki/File:A_black_Mahindra_XUV700_SUV_in_Ashiana_Brahmananda,_Jamshedpur,_India_(Ank_Kumar,_Infosys_Limited)_02.jpg
+- cars/bmw3-1.jpg: https://commons.wikimedia.org/wiki/File:BMW_3_SERIES_SEDAN_(G20)_China_(2).jpg
+- cars/bmw3-2.jpg: https://commons.wikimedia.org/wiki/File:BMW_3_SERIES_SEDAN_(G20)_China.jpg
+- cars/cclass-1.jpg: https://commons.wikimedia.org/wiki/File:MERCEDES-BENZ_C-CLASS_LWB_(W206)_China_(7).jpg
+- cars/cclass-2.jpg: https://commons.wikimedia.org/wiki/File:MERCEDES-BENZ_C-CLASS_LWB_(W206)_China_(12).jpg
+- cars/zsev-1.jpg: https://commons.wikimedia.org/wiki/File:MG_ZS_EV_in_France_(front_left_quarter).jpg
+- cars/fortuner-1.jpg: https://commons.wikimedia.org/wiki/File:Toyota_Fortuner_4x2_G_2021.jpg
+- cars/fortuner-2.jpg: https://commons.wikimedia.org/wiki/File:2021_Toyota_Fortuner_2.4V_Modellista.jpg
+- photos/hero.jpg: https://unsplash.com/photos/photo-1485291571150-772bcfc10da5
+- photos/road.jpg: https://unsplash.com/photos/photo-1568605117036-5fe5e7bab0b7
+- photos/interior.jpg: https://unsplash.com/photos/photo-1449965408869-eaa3f722e40d
+- photos/cat-suv.jpg: https://unsplash.com/photos/photo-1533473359331-0135ef1b58bf
+- photos/cat-ev.jpg: https://unsplash.com/photos/photo-1606016159991-dfe4f2746ad5
+- photos/cat-luxury.jpg: https://unsplash.com/photos/photo-1555215695-3004980ad54e
+- photos/cat-hatchback.jpg: https://unsplash.com/photos/photo-1541899481282-d53bffe3c35d
+- photos/cat-sedan.jpg: https://unsplash.com/photos/photo-1619767886558-efdc259cde1a
+- photos/cat-premium.jpg: https://unsplash.com/photos/photo-1520031441872-265e4ff70366
+- photos/offroad.jpg: https://unsplash.com/photos/photo-1506015391300-4802dc74de2e
+- photos/night.jpg: https://unsplash.com/photos/photo-1609521263047-f8f205293f24
