@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next";
+import { siteUrl } from "@/lib/site-url";
 import { db } from "@/lib/db";
 
 export const revalidate = 3600;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const base = process.env.APP_URL ?? "http://localhost:3000";
+  const base = siteUrl();
   const cars = await db.vehicle.findMany({ where: { status: { not: "INACTIVE" } }, select: { slug: true, updatedAt: true } }).catch(() => []);
   const staticPages = ["", "/cars", "/how-it-works", "/about", "/contact", "/offers", "/legal/terms", "/legal/privacy", "/legal/cancellation", "/legal/rental-agreement"];
   return [

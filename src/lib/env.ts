@@ -1,4 +1,5 @@
 import "server-only";
+import { siteUrl } from "./site-url";
 
 function optional(name: string): string | undefined {
   const v = process.env[name];
@@ -9,7 +10,7 @@ function optional(name: string): string | undefined {
 // import, so `next build` doesn't need runtime secrets.
 
 export const env = {
-  appUrl: optional("APP_URL") ?? (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000"),
+  appUrl: siteUrl(),
   /** When true, demo helpers (simulated payments, on-screen OTP codes) are enabled where no real provider is configured. */
   demoMode: optional("DEMO_MODE") === "true",
   cronSecret: optional("CRON_SECRET"),

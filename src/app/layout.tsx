@@ -2,11 +2,12 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Inter_Tight } from "next/font/google";
 import { Toaster } from "sonner";
 import "./globals.css";
+import { siteUrl } from "@/lib/site-url";
 
 const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const display = Inter_Tight({ subsets: ["latin"], variable: "--font-display", display: "swap", weight: ["500", "600", "700", "800"] });
 
-const appUrl = process.env.APP_URL ?? "http://localhost:3000";
+const appUrl = siteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(appUrl),
