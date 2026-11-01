@@ -87,7 +87,15 @@ export function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col-reverse items-start justify-between gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-center">
-          <p className="text-[13px] text-white/40">© {new Date().getFullYear()} MyDrivez Mobility Pvt. Ltd. All rights reserved.</p>
+          <div className="space-y-1">
+            <p className="text-[13px] text-white/40">© {new Date().getFullYear()} MyDrivez Mobility Pvt. Ltd. All rights reserved.</p>
+            <p className="text-[13px] text-white/40">
+              Designed &amp; developed by{" "}
+              <a href="https://ownwebify.com" target="_blank" rel="noopener" className="font-semibold text-white/70 transition-colors hover:text-lime">
+                OwnWebify
+              </a>
+            </p>
+          </div>
           <div className="flex gap-2">
             {[Instagram, Twitter, Linkedin, Youtube].map((Icon, i) => (
               <a

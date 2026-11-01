@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     images: ["/photos/hero.jpg"],
   },
   twitter: { card: "summary_large_image" },
+  authors: [{ name: "OwnWebify", url: "https://ownwebify.com" }],
+  creator: "OwnWebify",
+  publisher: "OwnWebify",
 };
 
 export const viewport: Viewport = {

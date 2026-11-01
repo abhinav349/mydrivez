@@ -1,5 +1,7 @@
 # MyDrivez: premium self-drive car rentals
 
+_Designed & developed by [OwnWebify](https://ownwebify.com)._
+
 A full-stack, production-oriented car rental platform with three parts: a public site, a customer dashboard and an admin console. It's built with Next.js 15, TypeScript, Tailwind CSS, Prisma and PostgreSQL.
 
 > **Status: client demo.** Payments run in a clearly labelled **demo sandbox** until you add Razorpay keys. All seeded data is flagged `isDemo` and marked with a **DEMO** badge in the admin console. Read [What's real vs. demo](#whats-real-vs-demo) before showing it to anyone.

@@ -26,6 +26,12 @@ export default async function AdminLoginPage() {
           <p className="mb-6 mt-1 text-[14px] text-muted">Authorised MyDrivez personnel only. All actions are logged.</p>
           <LoginForm portal="admin" />
         </div>
+        <p className="mt-6 text-center text-[12.5px] text-white/40">
+          Platform by{" "}
+          <a href="https://ownwebify.com" target="_blank" rel="noopener" className="font-semibold text-white/70 hover:text-lime">
+            OwnWebify
+          </a>
+        </p>
       </div>
     </div>
   );
