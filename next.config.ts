@@ -10,6 +10,12 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // Zero-setup demo database (used when DATABASE_URL is unset): PGlite loads WASM/data files at
+  // runtime, so keep it unbundled and ship its files plus the migration SQL with every function.
+  serverExternalPackages: ["@electric-sql/pglite", "pglite-prisma-adapter"],
+  outputFileTracingIncludes: {
+    "/**": ["./prisma/migrations/**/*.sql", "./node_modules/@electric-sql/pglite/dist/**/*"],
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [

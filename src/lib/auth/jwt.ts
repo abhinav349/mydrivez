@@ -11,16 +11,20 @@ export type SessionClaims = {
   role: "CUSTOMER" | "STAFF" | "ADMIN";
 };
 
-const DEV_SECRET = "dev-only-insecure-secret-change-me-please-32chars";
+// Hardcoded fallback for local dev and the zero-setup demo deployment (no DATABASE_URL).
+// Sessions are also checked against the database, so a signed token alone grants nothing.
+// A deployment with a real database MUST set its own AUTH_SECRET — see below.
+const DEMO_SECRET = "mydrivez-demo-only-secret-replace-with-AUTH_SECRET-before-launch";
 
-/** Checked per call (never at import) so builds work without secrets, but production never falls back to the dev key. */
+/** Checked per call (never at import) so builds work without secrets. */
 function key() {
   const secret = process.env.AUTH_SECRET?.trim();
   if (!secret) {
-    if (process.env.NODE_ENV === "production") {
+    const realDatabase = Boolean(process.env.DATABASE_URL?.trim());
+    if (process.env.NODE_ENV === "production" && realDatabase) {
       throw new Error("AUTH_SECRET is not set. Add it in your hosting environment variables (32+ random characters).");
     }
-    return new TextEncoder().encode(DEV_SECRET);
+    return new TextEncoder().encode(DEMO_SECRET);
   }
   if (secret.length < 32 && process.env.NODE_ENV === "production") {
     throw new Error("AUTH_SECRET is too short. Use at least 32 random characters.");

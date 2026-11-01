@@ -101,6 +101,19 @@ Useful demo coupons: `FIRSTDRIVE` (₹500 off first trip), `WEEKEND15`, `LONGDRI
 
 ## Deploy to Vercel
 
+### Option A: instant demo (no database, no settings)
+
+Import the repo in Vercel and deploy. That's all.
+
+With **no `DATABASE_URL`**, the app starts a built-in in-memory PostgreSQL (PGlite). It runs the real migrations and loads the full demo data (fleet, customers, six months of bookings) automatically. Defaults that are fine for a demo are hardcoded: a demo `AUTH_SECRET`, demo mode on, and the site URL taken from Vercel.
+
+Trade-offs, all fine for showing a client:
+- The first visit after a cold start takes about 4–5 seconds while the demo data loads; after that pages are fast.
+- Data resets to the demo state whenever Vercel restarts the server (usually after some idle time), so bookings made during a demo don't persist.
+- If Vercel runs several server instances at once, each has its own copy of the data.
+
+### Option B: real database (for launch)
+
 1. **Push this folder to GitHub** (`git init && git add . && git commit -m "MyDrivez" && git push`).
 2. **Create the database.** In Vercel, go to *Storage → Create → Neon Postgres* (or use Neon directly) and connect it to the project. Copy the **pooled** connection string into `DATABASE_URL`.
 3. **Import the repo** in Vercel (framework preset: Next.js). The build command (`prisma generate && next build`) is already in `package.json`.
@@ -124,8 +137,8 @@ See [`.env.example`](.env.example) for the full annotated list.
 
 | Variable | Required | Purpose |
 |---|---|---|
-| `DATABASE_URL` | ✅ | Postgres connection string |
-| `AUTH_SECRET` | ✅ | 32+ random chars for signing sessions (the app refuses to start in production without it) |
+| `DATABASE_URL` | for launch | Postgres connection string. **Leave unset for the zero-setup demo database** |
+| `AUTH_SECRET` | with a real DB | 32+ random chars for signing sessions. Required once `DATABASE_URL` is set; the demo falls back to a hardcoded demo secret |
 | `APP_URL` | ✅ | Public URL for emails, invoices and the sitemap |
 | `DEMO_MODE` | — | `true` enables the payment sandbox and on-screen OTPs **only where no real provider is configured** |
 | `CRON_SECRET` | recommended | Protects `/api/cron/reminders` |

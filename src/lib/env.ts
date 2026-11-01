@@ -12,7 +12,8 @@ function optional(name: string): string | undefined {
 export const env = {
   appUrl: siteUrl(),
   /** When true, demo helpers (simulated payments, on-screen OTP codes) are enabled where no real provider is configured. */
-  demoMode: optional("DEMO_MODE") === "true",
+  // Defaults to ON for the zero-setup demo deployment (no DATABASE_URL); set DEMO_MODE explicitly to override.
+  demoMode: optional("DEMO_MODE") ? optional("DEMO_MODE") === "true" : !optional("DATABASE_URL"),
   cronSecret: optional("CRON_SECRET"),
   razorpay: {
     keyId: optional("RAZORPAY_KEY_ID"),
